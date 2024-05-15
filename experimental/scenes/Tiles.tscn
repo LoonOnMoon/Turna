@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cot2fwv4o7qnr"]
+
+[ext_resource type="PackedScene" uid="uid://dx2mit4wlovq6" path="res://assets/models/ground_dirt.glb" id="1_tpbgk"]
+[ext_resource type="PackedScene" uid="uid://cpidmxxilkc0p" path="res://assets/models/ground_grass.glb" id="2_kwkup"]
+
+[node name="Tiles" type="Node3D"]
+
+[node name="ground_dirt" parent="." instance=ExtResource("1_tpbgk")]
+
+[node name="ground_grass" parent="." instance=ExtResource("2_kwkup")]
