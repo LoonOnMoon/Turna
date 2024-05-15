@@ -1,20 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7yc6ij0ejdmd"]
 
 [ext_resource type="Texture2D" uid="uid://bibe374nbessa" path="res://assets/sprites/atlas.png" id="1_2k7k7"]
-[ext_resource type="Script" path="res://scripts/towers/tower_behavior.gd" id="1_x7e51"]
+[ext_resource type="Script" path="res://scripts/towers/Tower.cs" id="1_cdehe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o3irf"]
 atlas = ExtResource("1_2k7k7")
 region = Rect2(0, 0, 16, 16)
 
 [node name="Tower" type="Node2D"]
-script = ExtResource("1_x7e51")
+script = ExtResource("1_cdehe")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -6)
 texture = SubResource("AtlasTexture_o3irf")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="AttackCooldownTimer" type="Timer" parent="."]
 autostart = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="AttackCooldownTimer" to="." method="_on_timer_timeout"]

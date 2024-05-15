@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0sflrjnxw3rb"]
 
 [ext_resource type="Texture2D" uid="uid://bibe374nbessa" path="res://assets/sprites/atlas.png" id="1_6g61a"]
-[ext_resource type="Script" path="res://scripts/enemy/enemy_behavior.gd" id="2_sg8wr"]
+[ext_resource type="Script" path="res://scripts/enemy/Enemy.cs" id="1_6pd1c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oawyu"]
 atlas = ExtResource("1_6g61a")
 region = Rect2(32, 0, 16, 16)
 
 [node name="Enemy" type="Node2D"]
-script = ExtResource("2_sg8wr")
+script = ExtResource("1_6pd1c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -8)
